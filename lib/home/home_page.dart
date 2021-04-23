@@ -1,5 +1,4 @@
 import 'package:dev_quiz/challlenge/challenge_page.dart';
-//import 'package:dev_quiz/challlenge/widgets/quiz/quiz_widget.dart';
 import 'package:dev_quiz/core/app_colors.dart';
 import 'package:dev_quiz/home/widgets/level_button/level_button_widget.dart';
 import 'package:dev_quiz/home/widgets/quiz_card/quiz_card_widget.dart';
@@ -77,8 +76,10 @@ class _HomePageState extends State<HomePage> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) =>
-                                  ChallengePage(questions: e.questions),
+                              builder: (context) => ChallengePage(
+                                questions: e.questions,
+                                title: e.title,
+                              ),
                             ));
                       },
                     );

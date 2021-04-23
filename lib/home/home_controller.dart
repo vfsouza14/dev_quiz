@@ -28,4 +28,11 @@ class HomeController {
     quizzes = await repository.getQuizzes();
     state = HomeState.sucess;
   }
+
+  // void fetchData() async {
+  //   state = HomeState.loading;
+  //   user = await repository.getUser();
+  //   quizzes = await repository.getQuizzes();
+  //   state = HomeState.sucess;
+  // }
 }
