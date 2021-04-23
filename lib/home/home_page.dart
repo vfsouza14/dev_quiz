@@ -1,4 +1,5 @@
-import 'package:dev_quiz/challlenge/widgets/quiz/quiz_widget.dart';
+import 'package:dev_quiz/challlenge/challenge_page.dart';
+//import 'package:dev_quiz/challlenge/widgets/quiz/quiz_widget.dart';
 import 'package:dev_quiz/core/app_colors.dart';
 import 'package:dev_quiz/home/widgets/level_button/level_button_widget.dart';
 import 'package:dev_quiz/home/widgets/quiz_card/quiz_card_widget.dart';
@@ -72,6 +73,14 @@ class _HomePageState extends State<HomePage> {
                       title: e.title,
                       completed: "${e.questionAnswered}/${e.questions.length}",
                       percent: e.questionAnswered / e.questions.length,
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ChallengePage(questions: e.questions),
+                            ));
+                      },
                     );
                   }).toList(),
                 ),
