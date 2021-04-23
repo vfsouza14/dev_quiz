@@ -21,7 +21,7 @@ class QuizWidget extends StatefulWidget {
 class _QuizWidgetState extends State<QuizWidget> {
   int indexSelected = -1;
 
-  AwnserModel awnser(int index) => widget.question.awnsers[index];
+  AwnserModel awnser(int index) => widget.question.answers[index];
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +36,7 @@ class _QuizWidgetState extends State<QuizWidget> {
             style: AppTextStyles.heading,
           ),
           SizedBox(height: 24),
-          for (var i = 0; i < widget.question.awnsers.length; i++)
+          for (var i = 0; i < widget.question.answers.length; i++)
             AwnserWidget(
               anwser: awnser(i),
               disabled: indexSelected != -1,
